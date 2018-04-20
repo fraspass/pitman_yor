@@ -17,19 +17,25 @@ The PPPF implied by the Pitman-Yor process is:
 
 The <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2212ac77cd4b90e98ea992ea6af765af.svg?invert_in_darkmode" align=middle width=108.165915pt height=14.15535pt/> obtained for each observed connection can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
 
-* Edgington's method: <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/e303c777d19dffe48a213a5f164fbc1f.svg?invert_in_darkmode" align=middle width=235.62495pt height=47.80611pt/></p>
+* Edgington's method: 
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/8cf4a27cbb84480d003265f7768d300c.svg?invert_in_darkmode" align=middle width=381.98325pt height=47.80611pt/></p>
 
-* Fisher's method: <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/6f91e1bdef9c66f5c4ba94040067e5fb.svg?invert_in_darkmode" align=middle width=235.51275pt height=47.80611pt/></p>
+* Fisher's method: 
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/98c062a718fc3a5522e2a81ea66abd93.svg?invert_in_darkmode" align=middle width=381.6351pt height=47.80611pt/></p>
 where <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/6ce73d15b9fabc46eb57c4f8fa5d0c74.svg?invert_in_darkmode" align=middle width=242.156805pt height=24.6576pt/>,
 
-* Pearson's method: <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/e32e9ff6eba5f8c0d50bae3f2f44da28.svg?invert_in_darkmode" align=middle width=261.9705pt height=47.80611pt/></p>
+* Pearson's method: 
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/3ac66a0216f3b2656e539c6990984133.svg?invert_in_darkmode" align=middle width=406.24485pt height=47.80611pt/></p>
 
-* George's method: <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/4f6ad8653b5ac97bae5977b12343c438.svg?invert_in_darkmode" align=middle width=514.63995pt height=49.62705pt/></p>
+* George's method: 
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/ed46d7c790140751a1dbb8f36105ed41.svg?invert_in_darkmode" align=middle width=537.52875pt height=49.62705pt/></p>
 
-* Stouffer's method <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/d0ef4966cadd2b83c0c7faf1019c525a.svg?invert_in_darkmode" align=middle width=239.8605pt height=47.80611pt/></p>
+* Stouffer's method 
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/fb0211a92c99a55d26693fc1ad589f88.svg?invert_in_darkmode" align=middle width=384.80805pt height=47.80611pt/></p>
 where <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/fd572b44cf8f2a97fc9474603fcc8c69.svg?invert_in_darkmode" align=middle width=46.872375pt height=26.76201pt/> is the inverse of the CDF <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/f04e663ab860a40f062cc6e871367aa8.svg?invert_in_darkmode" align=middle width=29.223975pt height=24.6576pt/> of a standard normal distribution,
 
-* Tippett's method (or minimum <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-value) method: <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/8fa726d26c00f971b16dc184a60bab45.svg?invert_in_darkmode" align=middle width=291.1128pt height=21.41898pt/></p> 
+* Tippett's method (or minimum <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-value) method: 
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/6f47354ed7c2e72922ef80fc243dbcf6.svg?invert_in_darkmode" align=middle width=418.97625pt height=21.41898pt/></p>
 
 Note that the distributional results are only valid under normal behaviour of the network.
 
