@@ -1,10 +1,12 @@
 ## Network-wide anomaly detection using the Pitman-Yor process
 
-This reposit contains python code used to perform network-wide anomaly detection using the Pitman-Yor process in a computer network. 
+This reposit contains Python code used to perform network-wide anomaly detection using the Pitman-Yor process in a computer network. 
 
-<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/5ff1739e79359192cb7a23cd2c3c962a.svg?invert_in_darkmode" align=middle width=79.61547pt height=15.572667pt/></p>
+A computer network can be interpreted as a directed graph <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/73dde20bcffb31b6177c5d21c5a96f6d.svg?invert_in_darkmode" align=middle width=78.37896pt height=24.6576pt/>, where <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode" align=middle width=13.242075pt height=22.46574pt/> is the node set of computers and <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/94db391751ae0befe931ce025807b400.svg?invert_in_darkmode" align=middle width=81.575175pt height=22.46574pt/> is the edge set of observed unique connections. 
 
-<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/522cbfbc866df378cb95b2ef083131b2.svg" align=middle width=0.0pt height=0.0pt/></p>
+Let us assume that <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/93e8f48a97001313f47040c9f354a850.svg?invert_in_darkmode" align=middle width=98.415405pt height=14.15535pt/> is a sequence of source computers that have connected to a destination computer <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/3a49e7753441741b7224c79f23973f59.svg?invert_in_darkmode" align=middle width=41.982435pt height=22.46574pt/>. The probability that the co
 
-(WORK IN PROGRESS)
+The PPPF implied by the Pitman-Yor process is:
+
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/d414ce68b2b6ff92130f05d0677859e3.svg?invert_in_darkmode" align=middle width=304.60485pt height=35.18196pt/></p>
 
