@@ -85,7 +85,7 @@ The $p$-values computed at the second stage give an anomaly score for the source
 An example of a data line in the LANL authentication dataset is:
 
 ```
-1,C608$@DOM1,C608$@DOM1,C608,C467,Kerberos,Network,LogOn,Success
+1,C608@DOM1,C608@DOM1,C608,C467,Kerberos,Network,LogOn,Success
 ```
 
 The following command returns the edge list `lanl_graph.txt` with tab sepearated source and destination, and weights given by the number of observed connections on each edge:
