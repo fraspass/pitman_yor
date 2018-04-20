@@ -1,9 +1,14 @@
 #! /usr/bin/env python
 import sys
-# Define the object for the edges
+
+## Example of input:
+# 1,C608$@DOM1,C608$@DOM1,C608,C467,Kerberos,Network,LogOn,Success
+
+# Count connections on each edge
 import collections
 edges = collections.Counter()
-# Define edges as a function that counts the interactions
+
+# Read from input
 for line in sys.stdin:
     # Strip and split the dataline
     d = line.strip().split(",")
@@ -15,6 +20,6 @@ for line in sys.stdin:
     except:
         continue
 
-# Print and obtain a file
+# Print to console
 for edge in edges:
     print '\t'.join(edge)+'\t'+str(edges[edge])
