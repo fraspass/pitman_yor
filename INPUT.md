@@ -41,7 +41,7 @@ S_E = \sum_{i=1}^N p_i & & S_E\overset{d}{\rightarrow}\mathbb N\left(\frac{N}{2}
 
 * Fisher's method - let $E_x=\{(x,y):y\in V\cap(x,y\in E)\}$, then:
 \begin{align*} 
-S_F = \sum_{i=1}^N \log(p_i) & & -2S_F\overset{d}{\sim}\chi^2_{2\vert E_x\vert},
+S_F = \sum_{i=1}^N \log(p_i) & & -2S_F\overset{d}{\sim}\chi^2_{2\vert E_x\vert} ,
 \end{align*}
 
 * Pearson's method
@@ -68,7 +68,7 @@ S_T = \min\{p_1,\dots,p_N\} & & S_T\overset{d}{\sim}\mathrm{Beta}(1,N)
 
 ### Anomaly detection
 
-In the code, the $p$-values and mid-$p$-values are combined in two different stages. Suppose that for a given destination computer $y\in V$, the $p$-values (and mid-$p$-values) $p_1,\dots,p_N$ corresponding to each observed connection are computed using the PY posterior predictive probability.
+In the code, the $p$-values and mid-$p$-values are combined in two different stages. Suppose that for a given destination computer $y\in V$, the $p$-values -- and mid-$p$-values -- $p_1,\dots,p_N$ corresponding to each observed connection are computed using the PY posterior predictive probability.
 
 * for all the connections on a given edge $x\to y$, it is possible to combine the $p$-values and obtain a grouped $p$-value $p_{xy}$ for each edge,
 
