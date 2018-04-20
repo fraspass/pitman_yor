@@ -6,6 +6,8 @@ This code builds up on the Hadoop-MapReduce procedure described in Heard and Rub
 
 # Methodology
 
+## The Pitman-Yor process
+
 A computer network can be interpreted as a directed graph $\mathbb{G}=(V,E)$, where $V$ is the node set of computers and $E\subseteq V\otimes V$ is the edge set of observed unique connections. 
 
 Let us assume that $x_1,x_2,\dots,x_N$ is a sequence of source computers that have connected to a destination computer $y\in V$. For the given destination computer $y$, we assume that the exchangeable sequence of source computers has the following hierarchical distribution:
@@ -22,7 +24,9 @@ $$ p_{n+1} = \sum_{x\in V:\phi_n(x)\leq\phi_n(x_{n+1})} \frac{\phi_n(x)}{\alpha+
 where:
 $$ \phi_n(u) = (\alpha-dK_n)G_0(u) + \sum_{i=1}^n \mathbb I\{x_i=u\} - d.$$
 
-The $p$-values $p_1,p_2,\dots,p_N$ obtained for each observed connection can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
+## Combining p-values
+
+The $p$-values $p_1,p_2,\dots,p_N$ obtained for each observed connection $x\to y,\ x,y\in V$ having $y$ as destination computer can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
 
 * Edgington's method
 \begin{align*}
