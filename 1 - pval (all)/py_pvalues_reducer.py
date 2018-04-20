@@ -108,7 +108,7 @@ def py_pvalue(x):
             # and include the discounting parameter
             total += (alpha + d * num_categories) * rank / float(k)
         # Initialise the value for the ties
-        tie_total =0
+        tie_total = 0
         # Set the value of rank to the total value of the ranks
         lower_rank = rank
         # While the lower_rank is lower than the number of categories and 
