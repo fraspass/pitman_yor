@@ -25,9 +25,7 @@ S_E = \sum_{i=1}^N p_i & & S_E\overset{d}{\rightarrow}\mathbb N\left(\frac{N}{2}
 \end{align*}
 
 * Fisher's method: 
-\begin{align*}
-S_F = \sum_{i=1}^N \log(p_i) & & -2S_F\overset{d}{\sim}\chi^2_{2\vert E_x\vert}
-\end{align*}
+\begin{align*} S_F = \sum_{i=1}^N \log(p_i) & & -2S_F\overset{d}{\sim}\chi^2_{2\vert E_x\vert}, \end{align*} 
 where $E_x=\{(x,y):y\in V\cap(x,y\in E)\}$,
 
 * Pearson's method: 
@@ -40,10 +38,8 @@ S_P = -\sum_{i=1}^N \log(1-p_i) & & 2S_P\overset{d}{\sim}\chi^2_{2\vert E_x\vert
 S_G = S_F + S_P = -\sum_{i=1}^N \log\left(\frac{p_i}{1-p_i}\right) & &\sqrt{\frac{3(5N+4)}{N(5N+2)}}\frac{S_G}{\pi}\overset{d}{\sim}t_{5N+4}, 
 \end{align*}
 
-* Stouffer's method 
-\begin{align*}
-S_F = \sum_{i=1}^N \Phi^{-1}(p_i) & & S_S\overset{d}{\sim}\mathbb N\left(0,n\right),
-\end{align*}
+* Stouffer's method:
+\begin{align*} S_F = \sum_{i=1}^N \Phi^{-1}(p_i) & & S_S\overset{d}{\sim}\mathbb N\left(0,n\right), \end{align*}
 where $\Phi^{-1}(\cdot)$ is the inverse of the CDF $\Phi(\cdot)$ of a standard normal distribution,
 
 * Tippett's method (or minimum $p$-value) method: 

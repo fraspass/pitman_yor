@@ -20,7 +20,7 @@ The <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f58
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/8cf4a27cbb84480d003265f7768d300c.svg?invert_in_darkmode" align=middle width=381.98325pt height=47.80611pt/></p>
 
 * Fisher's method: 
-<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/98c062a718fc3a5522e2a81ea66abd93.svg?invert_in_darkmode" align=middle width=381.6351pt height=47.80611pt/></p>
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/bae718e42740c90174c04a556a61a5b6.svg?invert_in_darkmode" align=middle width=385.50105pt height=47.80611pt/></p> 
 where <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/6ce73d15b9fabc46eb57c4f8fa5d0c74.svg?invert_in_darkmode" align=middle width=242.156805pt height=24.6576pt/>,
 
 * Pearson's method: 
@@ -29,8 +29,8 @@ where <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/6ce73d15b9fab
 * George's method: 
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/ed46d7c790140751a1dbb8f36105ed41.svg?invert_in_darkmode" align=middle width=537.52875pt height=49.62705pt/></p>
 
-* Stouffer's method 
-<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/fb0211a92c99a55d26693fc1ad589f88.svg?invert_in_darkmode" align=middle width=384.80805pt height=47.80611pt/></p>
+* Stouffer's method:
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/88d2de97afc9105c611b42f49e42216b.svg?invert_in_darkmode" align=middle width=384.80805pt height=47.80611pt/></p>
 where <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/fd572b44cf8f2a97fc9474603fcc8c69.svg?invert_in_darkmode" align=middle width=46.872375pt height=26.76201pt/> is the inverse of the CDF <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/f04e663ab860a40f062cc6e871367aa8.svg?invert_in_darkmode" align=middle width=29.223975pt height=24.6576pt/> of a standard normal distribution,
 
 * Tippett's method (or minimum <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-value) method: 
