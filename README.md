@@ -23,7 +23,7 @@ Therefore, the <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6
 where:
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/717a445608dc8369e881512f6fb1cfa0.svg?invert_in_darkmode" align=middle width=329.08425pt height=44.897325pt/></p>
 
-The code also uses mid-<img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/ddf070db9e957f370d2c285e5ad0df40.svg?invert_in_darkmode" align=middle width=141.84192pt height=22.63866pt/>, where:
+The code also uses mid-<img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/6a4c7b1002ca391a5b1db9923532c6a9.svg?invert_in_darkmode" align=middle width=171.888255pt height=24.6576pt/>, where:
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/07a08b46583fe3c7fb18b1d3be6e3f3f.svg?invert_in_darkmode" align=middle width=238.3458pt height=46.87419pt/></p>
 
 The mid-<img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values might be preferable since the distribution of the source nodes is discrete. 
