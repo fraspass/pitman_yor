@@ -21,7 +21,7 @@ where <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/96b697078d351b7
 Therefore, the <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-value for the <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/949707b3bc37b3be0f8b25742664879e.svg?invert_in_darkmode" align=middle width=50.962725pt height=24.6576pt/>-th observation is: 
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/c182d0ed7d70557480a9b1ddcc11b9a6.svg?invert_in_darkmode" align=middle width=238.3458pt height=46.87419pt/></p>
 where:
-<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/deee18365deb11c87453e50ed05ec9c9.svg?invert_in_darkmode" align=middle width=329.08425pt height=44.897325pt/></p>
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/717a445608dc8369e881512f6fb1cfa0.svg?invert_in_darkmode" align=middle width=329.08425pt height=44.897325pt/></p>
 
 The code also uses mid-<img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/ddf070db9e957f370d2c285e5ad0df40.svg?invert_in_darkmode" align=middle width=141.84192pt height=22.63866pt/>, where:
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/adb1ddcd4a1f5507874c291bb27aaadc.svg?invert_in_darkmode" align=middle width=238.3458pt height=46.87419pt/></p>
