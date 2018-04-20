@@ -4,6 +4,8 @@ This reposit contains python code used to perform network-wide anomaly detection
 
 $$ a^2+b^2=c$$
 
+\begin{figure}[!h]
+\centering
 \begin{tikzpicture}
 \newcounter{density}
 \setcounter{density}{20}
@@ -22,6 +24,7 @@ $$ a^2+b^2=c$$
         \draw[fill=\couleur!\thedensity] (A)--(B)--(C)--cycle;
     }
 \end{tikzpicture}
+\end{figure}
 
 (WORK IN PROGRESS)
 
