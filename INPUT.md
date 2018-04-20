@@ -22,7 +22,7 @@ $$ p_{X_{n+1}|X_n,\dots,X_1}(x_{n+1})=\frac{\alpha + dK_n}{\alpha+n}G_0(x_{n+1})
 Therefore, the $p$-value for the $(n+1)$-th observation is: 
 $$ p_{n+1} = \sum_{x\in V:\phi_n(x)\leq\phi_n(x_{n+1})} \frac{\phi_n(x)}{\alpha+n}, $$
 where:
-$$ \phi_n(u) = (\alpha-dK_n)G_0(u) + \sum_{i=1}^n \mathbb I\{x_i=u\} - d. $$
+$$ \phi_n(u) = (\alpha-dK_n)G_0(u) + \sum_{i=1}^n \mathbb I\{x_i=u\} - d . $$
 
 The code also uses mid-$p$-values $q_{n+1}=p_{n+1}+p_{n+1}^\star$, where:
 $$ p_{n+1}^\star = \sum_{x\in V:\phi_n(x)<\phi_n(x_{n+1})} \frac{\phi_n(x)}{\alpha+n}. $$
