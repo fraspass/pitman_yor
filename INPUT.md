@@ -56,7 +56,7 @@ S_G = S_F + S_P = \sum_{i=1}^N \log\left(\frac{p_i}{1-p_i}\right) & &\sqrt{\frac
 
 * Stouffer's method - let $\Phi^{-1}(\cdot)$ denote the inverse of the CDF $\Phi(\cdot)$ of a standard normal distribution, then:
 \begin{align*}
-S_F = \sum_{i=1}^N \Phi^{-1}(p_i) & & S_S\overset{d}{\sim}\mathbb N\left(0,n\right),
+S_F = \sum_{i=1}^N \Phi^{-1}(p_i) & & S_S\overset{d}{\sim}\mathbb N\left(0,n\right) ,
 \end{align*}
 
 * Tippett's method (or minimum $p$-value) method 
