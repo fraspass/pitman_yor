@@ -38,7 +38,7 @@ A sequence of $p$-values $p_1,p_2,\dots,p_N$ can be combined in this code using 
 
 * Edgington's method:
 \begin{align*}
-S_E = \sum_{i=1}^N p_i & & S_E\overset{d}{\rightarrow}\mathbb N\left(\frac{N}{2},\frac{N}{12}\right), 
+S_E = \sum_{i=1}^N p_i & & S_E\overset{d}{\rightarrow}\mathbb N\left(\frac{N}{2},\frac{N}{12}\right) , 
 \end{align*}
 
 * Fisher's method - let $E_x=\{(x,y):y\in V\cap(x,y\in E)\}$, then:
