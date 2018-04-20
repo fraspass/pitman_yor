@@ -19,7 +19,7 @@ Therefore, the <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6
 where:
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/b1b43bae3ed2da11ef0e7c48a4e5731a.svg?invert_in_darkmode" align=middle width=329.08425pt height=44.897325pt/></p>
 
-The <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2212ac77cd4b90e98ea992ea6af765af.svg?invert_in_darkmode" align=middle width=108.165915pt height=14.15535pt/> obtained for each observed connection can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
+The <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/0c5e0765d81b2b6f1fd949ea91e454f2.svg?invert_in_darkmode" align=middle width=95.042145pt height=14.15535pt/> obtained for each observed connection can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
 
 * Edgington's method
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/8cf4a27cbb84480d003265f7768d300c.svg?invert_in_darkmode" align=middle width=381.98325pt height=47.80611pt/></p>

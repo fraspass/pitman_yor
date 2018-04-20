@@ -22,7 +22,7 @@ $$ p_{n+1} = \sum_{x\in V:\phi_n(x)\leq\phi_n(x_{n+1})} \frac{\phi_n(x)}{\alpha+
 where:
 $$ \phi_n(u) = (\alpha-dK_n)G_0(u) + \sum_{i=1}^n \mathbb I\{x_i=u\} - d.$$
 
-The $p$-values $p_1,p_2,\dots,p_{n+1}$ obtained for each observed connection can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
+The $p$-values $p_1,p_2,\dots,p_N$ obtained for each observed connection can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
 
 * Edgington's method
 \begin{align*}
