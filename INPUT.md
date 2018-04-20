@@ -94,7 +94,7 @@ The following command returns the edge list `lanl_graph.txt` with tab sepearated
 hadoop fs -text MY_FOLDER/auth.txt.gz | ./get_auth_graph.py > lanl_graph.txt
 ```
 
-Given the LANL edge list, it is possible to obtain empirical Bayes estimates of the hyperparameters $\alpha$ and $d$ using the code in `opt.py`:
+Given the LANL edge list, it is possible to obtain empirical Bayes estimates of the hyperparameters $ \alpha $ and $ d $ using the code in `opt.py`:
 
 ```
 cat lanl_graph.txt | ./opt.py --ret alpha > alpha.txt
