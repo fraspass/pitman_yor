@@ -28,6 +28,7 @@ The code also uses mid-<img src="https://rawgit.com/fraspass/pitman_yor/None/svg
 
 The mid-<img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values might be preferable since the distribution of the source nodes is discrete. 
 
+
 Combining p-values
 ------------------
 

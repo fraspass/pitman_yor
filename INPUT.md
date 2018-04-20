@@ -31,6 +31,7 @@ $$ p_{n+1}^\star = \sum_{x\in V:\phi_n(x)<\phi_n(x_{n+1})} \frac{\phi_n(x)}{\alp
 
 The mid-$p$-values might be preferable since the distribution of the source nodes is discrete. 
 
+
 Combining p-values
 ------------------
 
