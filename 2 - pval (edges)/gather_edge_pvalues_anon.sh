@@ -1,10 +1,5 @@
 $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.2-dev-streaming.jar \
   -D mapred.job.name="Combine edge p-values" \
-  -D stream.num.map.output.key.fields=3 \
-  -D mapred.text.key.partitioner.options=-k1,2 \
-  -D mapred.output.key.comparator.class=org.apache.hadoop.mapred.lib.KeyFieldBasedComparator \
-  -D mapred.text.key.comparator.options="-k1,2 -k3,3n" \
-  -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner \
   -numReduceTasks 80 \
   -input MY_FOLDER/pitman_yor/part-* \
   -output MY_FOLDER/py_edge_pvals \
