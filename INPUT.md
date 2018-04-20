@@ -66,11 +66,15 @@ S_T = \min\{p_1,\dots,p_N\} & & S_T\overset{d}{\sim}\mathrm{Beta}(1,N)
 
 *Note that the distributional results are only valid under normal behaviour of the network.*
 
+### Anomaly detection
+
 In the code, the $p$-values and mid-$p$-values are combined in two different stages. Suppose that for a given destination computer $y\in V$, the $p$-values (and mid-$p$-values) $p_1,\dots,p_N$ corresponding to each observed connection are computed using the PY posterior predictive probability.
 
-* for all the connections on a given edge $x\to y$, it is possible to combine the $p$-values and obtain a grouped $p$-value $p_{xy}$,
+* for all the connections on a given edge $x\to y$, it is possible to combine the $p$-values and obtain a grouped $p$-value $p_{xy}$ for each edge,
 
 * given the $p$-values $p_{xy}$ for each edge, it is possible to combine the $p$-values $p_{xy_1},\dots,p_{xy_x}$ for a given source computer $x$, in order to obtain a $p$-value for each source computer.
+
+The $p$-values computed at the second stage give an anomaly score for the source node $x$, which can be used for anomaly detection. 
 
 # References
 
