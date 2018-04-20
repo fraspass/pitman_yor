@@ -67,7 +67,7 @@ The <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/2ec6e630f199f589a
 
 ### Data preprocessing
 
-An example of a data line in the LANL authentication dataset is:
+An example of a data line in the LANL authentication dataset (Kent, 2016) is:
 
 ```
 1,C608@DOM1,C608@DOM1,C608,C467,Kerberos,Network,LogOn,Success

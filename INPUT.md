@@ -82,7 +82,7 @@ The $p$-values computed at the second stage give an anomaly score for the source
 
 ### Data preprocessing
 
-An example of a data line in the LANL authentication dataset is:
+An example of a data line in the LANL authentication dataset (Kent, 2016) is:
 
 ```
 1,C608@DOM1,C608@DOM1,C608,C467,Kerberos,Network,LogOn,Success
