@@ -1,6 +1,10 @@
 ## Network-wide anomaly detection using the Pitman-Yor process
 
-This reposit contains Python code used to perform network-wide anomaly detection using the Pitman-Yor process in a computer network. 
+This reposit contains Python code used to perform network-wide anomaly detection using the two parameter Poisson-Dirichlet or Pitman-Yor process (Pitman and Yor, 1997) in a computer network. 
+
+This code builds up on the Hadoop-MapReduce procedure described in Heard and Rubin-Delanchy (2016). The Dirichlet process described by the authors in the paper is extended to include an extra parameter, which allows for more flexibility when modelling data exhibiting power-law behaviour.
+
+# Methodology
 
 A computer network can be interpreted as a directed graph $\mathbb{G}=(V,E)$, where $V$ is the node set of computers and $E\subseteq V\otimes V$ is the edge set of observed unique connections. 
 
@@ -15,4 +19,31 @@ The PPPF implied by the Pitman-Yor process is:
 $$
 p_{X_{n+1}|X_n,\dots,X_1}(x_{n+1})=\frac{\alpha + dK_n}{\alpha+n}G_0(x_{n+1}) + \sum_{j=1}^{K_n} \frac{N_{jn} - d}{\alpha + n} \delta_{x_j^\star}(x_{n+1})
 $$
+
+The $p$-values $p_1,p_2,\dots,p_{n+1}$ obtained for each observed connection can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
+
+* Edgington's method: $$ S_E = \sum_{i=1}^N p_i,\ S_E\overset{d}{\rightarrow}\mathbb N\left(\frac{N}{2},\frac{N}{12}\right), $$
+
+* Fisher's method: $$ S_F = \sum_{i=1}^N \log(p_i),\ -2S_F\overset{d}{\sim}\chi^2_{2\vert E_x\vert} $$
+where $E_x=\{(x,y):y\in V\cap(x,y\in E)\}$,
+
+* Pearson's method: $$ S_P = -\sum_{i=1}^N \log(1-p_i)\, 2S_P\overset{d}{\sim}\chi^2_{2\vert E_x\vert}, $$
+
+* George's method: $$ S_G = S_F + S_P = S_P = -\sum_{i=1}^N \log\left(\frac{p_i}{1-p_i}\right),\ \sqrt{\frac{3(5N+4)}{N(5N+2)}}\frac{S_G}{\pi}\overset{d}{\sim}t_{5N+4}, $$
+
+* Stouffer's method $$ S_F = \sum_{i=1}^N \Phi^{-1}(p_i),\ S_S\overset{d}{\sim}\mathbb N\left(0,n\right), $$
+where $\Phi^{-1}(\cdot)$ is the inverse of the CDF $\Phi(\cdot)$ of a standard normal distribution,
+
+* Tippett's method (or minimum $p$-value) method: $$ S_T = \min\{p_1,\dots,p_N\},\ S_T\overset{d}{\sim}\mathrm{Beta}(1,N) $$ 
+
+Note that the distributional results are only valid under normal behaviour of the network.
+
+# References
+
+* Heard, N.A. and Rubin-Delanchy, P. (2016), "Network-wide anomaly detection via the Dirichlet process", Proceedings of IEEE workshop on Big Data Analytics for Cyber-security Computing.
+
+* Heard, N.A. and Rubin-Delanchy, P. (2018), "Choosing between methods of combining p-values", Biometrika 105(1), 239–246.
+
+* Pitman, J. and Yor, M. (1997), "The two-parameter Poisson-Dirichlet distribution derived from a stable sub-ordinator", Annals of Probability 25, 855-900 .
+
 

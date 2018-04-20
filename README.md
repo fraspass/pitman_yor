@@ -1,6 +1,10 @@
 ## Network-wide anomaly detection using the Pitman-Yor process
 
-This reposit contains Python code used to perform network-wide anomaly detection using the Pitman-Yor process in a computer network. 
+This reposit contains Python code used to perform network-wide anomaly detection using the two parameter Poisson-Dirichlet or Pitman-Yor process (Pitman and Yor, 1997) in a computer network. 
+
+This code builds up on the Hadoop-MapReduce procedure described in Heard and Rubin-Delanchy (2016). The Dirichlet process described by the authors in the paper is extended to include an extra parameter, which allows for more flexibility when modelling data exhibiting power-law behaviour.
+
+# Methodology
 
 A computer network can be interpreted as a directed graph <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/73dde20bcffb31b6177c5d21c5a96f6d.svg?invert_in_darkmode" align=middle width=78.37896pt height=24.6576pt/>, where <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode" align=middle width=13.242075pt height=22.46574pt/> is the node set of computers and <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/94db391751ae0befe931ce025807b400.svg?invert_in_darkmode" align=middle width=81.575175pt height=22.46574pt/> is the edge set of observed unique connections. 
 
@@ -10,4 +14,31 @@ Let us assume that <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/
 The PPPF implied by the Pitman-Yor process is:
 
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/29e80c577f1f5518d280ac2ffb57089f.svg?invert_in_darkmode" align=middle width=482.9319pt height=50.226165pt/></p>
+
+The <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2212ac77cd4b90e98ea992ea6af765af.svg?invert_in_darkmode" align=middle width=108.165915pt height=14.15535pt/> obtained for each observed connection can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
+
+* Edgington's method: <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/e303c777d19dffe48a213a5f164fbc1f.svg?invert_in_darkmode" align=middle width=235.62495pt height=47.80611pt/></p>
+
+* Fisher's method: <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/6f91e1bdef9c66f5c4ba94040067e5fb.svg?invert_in_darkmode" align=middle width=235.51275pt height=47.80611pt/></p>
+where <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/6ce73d15b9fabc46eb57c4f8fa5d0c74.svg?invert_in_darkmode" align=middle width=242.156805pt height=24.6576pt/>,
+
+* Pearson's method: <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/e32e9ff6eba5f8c0d50bae3f2f44da28.svg?invert_in_darkmode" align=middle width=261.9705pt height=47.80611pt/></p>
+
+* George's method: <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/4f6ad8653b5ac97bae5977b12343c438.svg?invert_in_darkmode" align=middle width=514.63995pt height=49.62705pt/></p>
+
+* Stouffer's method <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/d0ef4966cadd2b83c0c7faf1019c525a.svg?invert_in_darkmode" align=middle width=239.8605pt height=47.80611pt/></p>
+where <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/fd572b44cf8f2a97fc9474603fcc8c69.svg?invert_in_darkmode" align=middle width=46.872375pt height=26.76201pt/> is the inverse of the CDF <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/f04e663ab860a40f062cc6e871367aa8.svg?invert_in_darkmode" align=middle width=29.223975pt height=24.6576pt/> of a standard normal distribution,
+
+* Tippett's method (or minimum <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-value) method: <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/8fa726d26c00f971b16dc184a60bab45.svg?invert_in_darkmode" align=middle width=291.1128pt height=21.41898pt/></p> 
+
+Note that the distributional results are only valid under normal behaviour of the network.
+
+# References
+
+* Heard, N.A. and Rubin-Delanchy, P. (2016), "Network-wide anomaly detection via the Dirichlet process", Proceedings of IEEE workshop on Big Data Analytics for Cyber-security Computing.
+
+* Heard, N.A. and Rubin-Delanchy, P. (2018), "Choosing between methods of combining p-values", Biometrika 105(1), 239–246.
+
+* Pitman, J. and Yor, M. (1997), "The two-parameter Poisson-Dirichlet distribution derived from a stable sub-ordinator", Annals of Probability 25, 855-900 .
+
 
