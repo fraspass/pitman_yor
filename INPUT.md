@@ -24,35 +24,33 @@ $$ \phi_n(u) = (\alpha-dK_n)G_0(u) + \sum_{i=1}^n \mathbb I\{x_i=u\} - d.$$
 
 The $p$-values $p_1,p_2,\dots,p_{n+1}$ obtained for each observed connection can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
 
-* Edgington's method: 
+* Edgington's method
 \begin{align*}
 S_E = \sum_{i=1}^N p_i & & S_E\overset{d}{\rightarrow}\mathbb N\left(\frac{N}{2},\frac{N}{12}\right), 
 \end{align*}
 
-* Fisher's method: 
-\begin{align*} S_F = \sum_{i=1}^N \log(p_i) & & -2S_F\overset{d}{\sim}\chi^2_{2\vert E_x\vert}, \end{align*} 
-where $E_x=\{(x,y):y\in V\cap(x,y\in E)\}$,
+* Fisher's method - let $E_x=\{(x,y):y\in V\cap(x,y\in E)\}$, then:
+\begin{align*} S_F = \sum_{i=1}^N \log(p_i) & & -2S_F\overset{d}{\sim}\chi^2_{2\vert E_x\vert}, \end{align*}
 
-* Pearson's method: 
+* Pearson's method
 \begin{align*}
 S_P = -\sum_{i=1}^N \log(1-p_i) & & 2S_P\overset{d}{\sim}\chi^2_{2\vert E_x\vert},
 \end{align*}
 
-* George's method: 
+* George's method 
 \begin{align*}
 S_G = S_F + S_P = -\sum_{i=1}^N \log\left(\frac{p_i}{1-p_i}\right) & &\sqrt{\frac{3(5N+4)}{N(5N+2)}}\frac{S_G}{\pi}\overset{d}{\sim}t_{5N+4}, 
 \end{align*}
 
-* Stouffer's method:
+* Stouffer's method - let $\Phi^{-1}(\cdot)$ denote the inverse of the CDF $\Phi(\cdot)$ of a standard normal distribution, then:
 \begin{align*} S_F = \sum_{i=1}^N \Phi^{-1}(p_i) & & S_S\overset{d}{\sim}\mathbb N\left(0,n\right), \end{align*}
-where $\Phi^{-1}(\cdot)$ is the inverse of the CDF $\Phi(\cdot)$ of a standard normal distribution,
 
-* Tippett's method (or minimum $p$-value) method: 
+* Tippett's method (or minimum $p$-value) method 
 \begin{align*}
 S_T = \min\{p_1,\dots,p_N\} & & S_T\overset{d}{\sim}\mathrm{Beta}(1,N)
 \end{align*}
 
-Note that the distributional results are only valid under normal behaviour of the network.
+*Note that the distributional results are only valid under normal behaviour of the network.*
 
 # References
 
