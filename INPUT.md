@@ -53,7 +53,7 @@ S_P = -\sum_{i=1}^N \log(1-p_i) & & 2S_P\overset{d}{\sim}\chi^2_{2\vert E_x\vert
 
 * George's method: 
 \begin{align*}
-S_G = S_F + S_P = \sum_{i=1}^N \log\left(\frac{p_i}{1-p_i}\right) & &\sqrt{\frac{3(5N+4)}{N(5N+2)}}\frac{S_G}{\pi}\overset{d}{\sim}t_{5N+4}, 
+S_G = S_F + S_P = \sum_{i=1}^N \log\left(\frac{p_i}{1-p_i}\right) & &\sqrt{\frac{3(5N+4)}{N(5N+2)}}\frac{S_G}{\pi}\overset{d}{\sim}t_{5N+4} , 
 \end{align*}
 
 * Stouffer's method - let $\Phi^{-1}(\cdot)$ denote the inverse of the CDF $\Phi(\cdot)$ of a standard normal distribution, then:
