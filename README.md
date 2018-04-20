@@ -21,6 +21,11 @@ Therefore, the <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6
 where:
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/b1b43bae3ed2da11ef0e7c48a4e5731a.svg?invert_in_darkmode" align=middle width=329.08425pt height=44.897325pt/></p>
 
+The code also uses mid-<img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/ddf070db9e957f370d2c285e5ad0df40.svg?invert_in_darkmode" align=middle width=141.84192pt height=22.63866pt/>, where:
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/adb1ddcd4a1f5507874c291bb27aaadc.svg?invert_in_darkmode" align=middle width=238.3458pt height=46.87419pt/></p>
+
+The mid-<img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values might be preferable since the distribution of the source nodes is discrete. 
+
 ## Combining p-values
 
 The <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/0c5e0765d81b2b6f1fd949ea91e454f2.svg?invert_in_darkmode" align=middle width=95.042145pt height=14.15535pt/> obtained for each observed connection <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/22dd6f1806b41ca84abe947182a1621b.svg?invert_in_darkmode" align=middle width=115.083375pt height=22.46574pt/> having <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/deceeaf6940a8c7a5a02373728002b0f.svg?invert_in_darkmode" align=middle width=8.6493pt height=14.15535pt/> as destination computer can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):

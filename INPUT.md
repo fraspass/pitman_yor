@@ -24,6 +24,11 @@ $$ p_{n+1} = \sum_{x\in V:\phi_n(x)\leq\phi_n(x_{n+1})} \frac{\phi_n(x)}{\alpha+
 where:
 $$ \phi_n(u) = (\alpha-dK_n)G_0(u) + \sum_{i=1}^n \mathbb I\{x_i=u\} - d.$$
 
+The code also uses mid-$p$-values $q_{n+1}=p_{n+1}+p_{n+1}^\star$, where:
+$$ p_{n+1}^\star = \sum_{x\in V:\phi_n(x)<\phi_n(x_{n+1})} \frac{\phi_n(x)}{\alpha+n}. $$
+
+The mid-$p$-values might be preferable since the distribution of the source nodes is discrete. 
+
 ## Combining p-values
 
 The $p$-values $p_1,p_2,\dots,p_N$ obtained for each observed connection $x\to y,\ x,y\in V$ having $y$ as destination computer can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
