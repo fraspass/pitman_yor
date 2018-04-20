@@ -43,7 +43,7 @@ A sequence of <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/3ac66a0216f3b2656e539c6990984133.svg?invert_in_darkmode" align=middle width=406.24485pt height=47.80611pt/></p>
 
 * George's method: 
-<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/398adecfd6f2b1fa601ba9038c6ea459.svg?invert_in_darkmode" align=middle width=527.17995pt height=49.62705pt/></p>
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/3f0fd7c4baab7f2f1f08dbbd2071a3ae.svg?invert_in_darkmode" align=middle width=529.61535pt height=49.62705pt/></p>
 
 * Stouffer's method - let <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/fd572b44cf8f2a97fc9474603fcc8c69.svg?invert_in_darkmode" align=middle width=46.872375pt height=26.76201pt/> denote the inverse of the CDF <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/f04e663ab860a40f062cc6e871367aa8.svg?invert_in_darkmode" align=middle width=29.223975pt height=24.6576pt/> of a standard normal distribution, then:
 <p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/5ee1a9c5c643c957e2408aa34dea31fa.svg?invert_in_darkmode" align=middle width=384.80805pt height=47.80611pt/></p>
