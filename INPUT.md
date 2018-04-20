@@ -48,7 +48,7 @@ S_F = \sum_{i=1}^N \log(p_i) & & -2S_F\overset{d}{\sim}\chi^2_{2\vert E_x\vert} 
 
 * Pearson's method:
 \begin{align*}
-S_P = -\sum_{i=1}^N \log(1-p_i) & & 2S_P\overset{d}{\sim}\chi^2_{2\vert E_x\vert},
+S_P = -\sum_{i=1}^N \log(1-p_i) & & 2S_P\overset{d}{\sim}\chi^2_{2\vert E_x\vert} ,
 \end{align*}
 
 * George's method: 
