@@ -50,24 +50,18 @@ def get_hyperparameters(x):
 	# Return the parameter values according to -ret
 	if ret == "alpha": 
 		return alpha 
+	elif ret == "d":
+		return d 
+	elif ret == "both": 
+		return [alpha,d] 
+	elif ret == "K": 
+		return K 
+	elif ret == "H": 
+		return H
+	elif ret == "N": 
+		return N 
 	else: 
-		if ret == "d":
-			return d 
-		else: 
-			if ret == "both": 
-				return [alpha,d] 
-			else: 
-				if ret == "K": 
-					return K 
-				else: 
-					if ret == "H": 
-						return H 
-					else: 
-						if ret == "N": 
-							return N 
-						else: 
-							if ret == "all": 
-								return [alpha,d,K,H,N]
+		return [alpha,d,K,H,N]
 
 ## Apply the function on the LANL graph and obtain the parameter values
 param_array = (lanl_graph.groupby("dst")["n"].agg([get_hyperparameters]))["get_hyperparameters"]
