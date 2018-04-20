@@ -13,6 +13,6 @@ Let us assume that $x_1,x_2,\dots,x_N$ is a sequence of source computers that ha
 The PPPF implied by the Pitman-Yor process is:
 
 $$
-p_{X_{n+1}|X_n,\dots,X_1}(x_{n+1})=\frac{\alpha + dK_n}{\alpha+n}G_0(x_{n+1}) + \sum_{j=1}^{K_n} \frac{N_{jn} - d}{\alpha + n}
+p_{X_{n+1}|X_n,\dots,X_1}(x_{n+1})=\frac{\alpha + dK_n}{\alpha+n}G_0(x_{n+1}) + \sum_{j=1}^{K_n} \frac{N_{jn} - d}{\alpha + n} \delta_{x_j^\star}(x_{n+1})
 $$
 

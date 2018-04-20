@@ -9,5 +9,5 @@ Let us assume that <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/
 
 The PPPF implied by the Pitman-Yor process is:
 
-<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/e293df9c46017b515a5a9831822871cc.svg?invert_in_darkmode" align=middle width=410.73285pt height=50.226165pt/></p>
+<p align="center"><img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/29e80c577f1f5518d280ac2ffb57089f.svg?invert_in_darkmode" align=middle width=482.9319pt height=50.226165pt/></p>
 
