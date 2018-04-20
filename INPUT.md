@@ -76,7 +76,7 @@ In the code, the $p$-values and mid-$p$-values are combined in two different sta
 
 The $p$-values computed at the second stage give an anomaly score for the source node $x$, which can be used for anomaly detection. 
 
-# References
+## References
 
 * Heard, N.A. and Rubin-Delanchy, P. (2016), "Network-wide anomaly detection via the Dirichlet process", Proceedings of IEEE workshop on Big Data Analytics for Cyber-Security Computing.
 

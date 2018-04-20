@@ -61,7 +61,7 @@ In the code, the <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/2ec6
 
 The <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values computed at the second stage give an anomaly score for the source node <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.3951pt height=14.15535pt/>, which can be used for anomaly detection. 
 
-# References
+## References
 
 * Heard, N.A. and Rubin-Delanchy, P. (2016), "Network-wide anomaly detection via the Dirichlet process", Proceedings of IEEE workshop on Big Data Analytics for Cyber-Security Computing.
 
