@@ -4,7 +4,6 @@ This reposit contains python code used to perform network-wide anomaly detection
 
 $$ a^2+b^2=c$$
 
-\centering
 \begin{tikzpicture}
 \newcounter{density}
 \setcounter{density}{20}
