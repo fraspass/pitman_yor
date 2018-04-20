@@ -18,6 +18,7 @@ Let us assume that $x_1,x_2,\dots,x_N$ is a sequence of source computers that ha
 
 The PPPF implied by the Pitman-Yor process is:
 $$ p_{X_{n+1}|X_n,\dots,X_1}(x_{n+1})=\frac{\alpha + dK_n}{\alpha+n}G_0(x_{n+1}) + \sum_{j=1}^{K_n} \frac{N_{jn} - d}{\alpha + n} \delta_{x_j^\star}(x_{n+1}) $$
+
 where $K_n$ is the number of unique source computers that have connected to $y$ up to time $n$, and $N_{jn}, j=1,\dots,K_n$ is the number of times the source computer $x_j^\star,\ j=1,\dots,K_n$ has connected to $y$ in the fist $n$ observed connections to the destination computer. 
 
 Therefore, the $p$-value for the $(n+1)$-th observation is: 
