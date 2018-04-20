@@ -80,10 +80,10 @@ The $p$-values computed at the second stage give an anomaly score for the source
 
 ## References
 
-* Heard, N.A. and Rubin-Delanchy, P. (2016), "Network-wide anomaly detection via the Dirichlet process", Proceedings of IEEE workshop on Big Data Analytics for Cyber-Security Computing.
+* Heard, N.A. and Rubin-Delanchy, P. (2016), "Network-wide anomaly detection via the Dirichlet process", Proceedings of IEEE workshop on Big Data Analytics for Cyber-Security Computing. ([Link](https://ieeexplore.ieee.org/document/7745478/))
 
-* Heard, N.A. and Rubin-Delanchy, P. (2018), "Choosing between methods of combining p-values", Biometrika 105(1), 239–246.
+* Heard, N.A. and Rubin-Delanchy, P. (2018), "Choosing between methods of combining p-values", Biometrika 105(1), 239–246. ([Link](https://academic.oup.com/biomet/article-abstract/105/1/239/4788722?redirectedFrom=fulltext))
 
-* Pitman, J. and Yor, M. (1997), "The two-parameter Poisson-Dirichlet distribution derived from a stable sub-ordinator", Annals of Probability 25, 855-900.
+* Pitman, J. and Yor, M. (1997), "The two-parameter Poisson-Dirichlet distribution derived from a stable sub-ordinator", Annals of Probability 25, 855-900. ([Link](https://projecteuclid.org/euclid.aop/1024404422))
 
 
