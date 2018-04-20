@@ -4,9 +4,11 @@ This reposit contains Python code used to perform network-wide anomaly detection
 
 This code builds up on the Hadoop-MapReduce procedure described in Heard and Rubin-Delanchy (2016). The Dirichlet process described by the authors in the paper is extended to include an extra parameter, which allows for more flexibility when modelling data exhibiting power-law behaviour.
 
-# Methodology
+Methodology
+===========
 
-## The Pitman-Yor process
+The Pitman-Yor process
+----------------------
 
 A computer network can be interpreted as a directed graph <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/73dde20bcffb31b6177c5d21c5a96f6d.svg?invert_in_darkmode" align=middle width=78.37896pt height=24.6576pt/>, where <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/a9a3a4a202d80326bda413b5562d5cd1.svg?invert_in_darkmode" align=middle width=13.242075pt height=22.46574pt/> is the node set of computers and <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/94db391751ae0befe931ce025807b400.svg?invert_in_darkmode" align=middle width=81.575175pt height=22.46574pt/> is the edge set of observed unique connections. 
 
@@ -26,8 +28,8 @@ The code also uses mid-<img src="https://rawgit.com/fraspass/pitman_yor/None/svg
 
 The mid-<img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values might be preferable since the distribution of the source nodes is discrete. 
 
-
-## Combining p-values
+Combining p-values
+------------------
 
 The <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/0c5e0765d81b2b6f1fd949ea91e454f2.svg?invert_in_darkmode" align=middle width=95.042145pt height=14.15535pt/> obtained for each observed connection <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/22dd6f1806b41ca84abe947182a1621b.svg?invert_in_darkmode" align=middle width=115.083375pt height=22.46574pt/> having <img src="https://rawgit.com/fraspass/pitman_yor/None/svgs/deceeaf6940a8c7a5a02373728002b0f.svg?invert_in_darkmode" align=middle width=8.6493pt height=14.15535pt/> as destination computer can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
 

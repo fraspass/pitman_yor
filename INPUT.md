@@ -4,9 +4,11 @@ This reposit contains Python code used to perform network-wide anomaly detection
 
 This code builds up on the Hadoop-MapReduce procedure described in Heard and Rubin-Delanchy (2016). The Dirichlet process described by the authors in the paper is extended to include an extra parameter, which allows for more flexibility when modelling data exhibiting power-law behaviour.
 
-# Methodology
+Methodology
+===========
 
-## The Pitman-Yor process
+The Pitman-Yor process
+----------------------
 
 A computer network can be interpreted as a directed graph $\mathbb{G}=(V,E)$, where $V$ is the node set of computers and $E\subseteq V\otimes V$ is the edge set of observed unique connections. 
 
@@ -29,8 +31,8 @@ $$ p_{n+1}^\star = \sum_{x\in V:\phi_n(x)<\phi_n(x_{n+1})} \frac{\phi_n(x)}{\alp
 
 The mid-$p$-values might be preferable since the distribution of the source nodes is discrete. 
 
-
-## Combining p-values
+Combining p-values
+------------------
 
 The $p$-values $p_1,p_2,\dots,p_N$ obtained for each observed connection $x\to y,\ x,y\in V$ having $y$ as destination computer can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
 
