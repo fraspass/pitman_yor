@@ -63,6 +63,39 @@ In the code, the <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2e
 
 The <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode" align=middle width=8.270625pt height=14.15535pt/>-values computed at the second stage give an anomaly score for the source node <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.3951pt height=14.15535pt/>, which can be used for anomaly detection. 
 
+## Usage
+
+### Data preprocessing
+
+An example of a data line in the LANL authentication dataset is:
+
+```
+1,C608<img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/c143da40e242b17b4787b10ebf7141ee.svg?invert_in_darkmode" align=middle width=110.69421pt height=22.83138pt/>@DOM1,C608,C467,Kerberos,Network,LogOn,Success
+```
+
+The following command returns the edge list `lanl_graph.txt` with tab sepearated source and destination, and weights given by the number of observed connections on each edge:
+
+```
+hadoop fs -text MY_FOLDER/auth.txt.gz | ./get_auth_graph.py > lanl_graph.txt
+```
+
+Given the LANL edge list, it is possible to obtain empirical Bayes estimates of the hyperparameters <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode" align=middle width=10.5765pt height=14.15535pt/> and <img src="https://rawgit.com/fraspass/pitman_yor/master/svgs/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode" align=middle width=8.556075pt height=22.83138pt/> using the code in `opt.py`:
+
+```
+cat lanl_graph.txt | ./opt.py --ret alpha > alpha.txt
+cat lanl_graph.txt | ./opt.py --ret d > d.txt
+cat lanl_graph.txt | ./opt.py --ret all > all.txt
+```
+
+### Hadoop procedures
+
+The first of the three Hadoop MapReduce procedures can be most simply run using the command:
+```
+./py_anon.sh &
+```
+
+where the anonymised file `py_anon.sh` in `1 - pvals (all)` is appropriately modified to give the correct -input and -output. Similar procedures can be carried out for the two remaining MapReduce procedures, using the `.sh` files in the folders `2 - pvals (edges)` and `3 - pvals (nodes)`. 
+
 ## References
 
 * Heard, N.A. and Rubin-Delanchy, P. (2016), "Network-wide anomaly detection via the Dirichlet process", Proceedings of IEEE workshop on Big Data Analytics for Cyber-Security Computing. ([Link](https://ieeexplore.ieee.org/document/7745478/))

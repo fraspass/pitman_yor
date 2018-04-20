@@ -78,6 +78,39 @@ In the code, the $p$-values and mid-$p$-values are combined in two different sta
 
 The $p$-values computed at the second stage give an anomaly score for the source node $x$, which can be used for anomaly detection. 
 
+## Usage
+
+### Data preprocessing
+
+An example of a data line in the LANL authentication dataset is:
+
+```
+1,C608$@DOM1,C608$@DOM1,C608,C467,Kerberos,Network,LogOn,Success
+```
+
+The following command returns the edge list `lanl_graph.txt` with tab sepearated source and destination, and weights given by the number of observed connections on each edge:
+
+```
+hadoop fs -text MY_FOLDER/auth.txt.gz | ./get_auth_graph.py > lanl_graph.txt
+```
+
+Given the LANL edge list, it is possible to obtain empirical Bayes estimates of the hyperparameters $\alpha$ and $d$ using the code in `opt.py`:
+
+```
+cat lanl_graph.txt | ./opt.py --ret alpha > alpha.txt
+cat lanl_graph.txt | ./opt.py --ret d > d.txt
+cat lanl_graph.txt | ./opt.py --ret all > all.txt
+```
+
+### Hadoop procedures
+
+The first of the three Hadoop MapReduce procedures can be most simply run using the command:
+```
+./py_anon.sh &
+```
+
+where the anonymised file `py_anon.sh` in `1 - pvals (all)` is appropriately modified to give the correct -input and -output. Similar procedures can be carried out for the two remaining MapReduce procedures, using the `.sh` files in the folders `2 - pvals (edges)` and `3 - pvals (nodes)`. 
+
 ## References
 
 * Heard, N.A. and Rubin-Delanchy, P. (2016), "Network-wide anomaly detection via the Dirichlet process", Proceedings of IEEE workshop on Big Data Analytics for Cyber-Security Computing. ([Link](https://ieeexplore.ieee.org/document/7745478/))
