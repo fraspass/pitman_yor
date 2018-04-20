@@ -32,7 +32,7 @@ The mid-$p$-values might be preferable since the distribution of the source node
 
 ### Combining p-values
 
-The $p$-values $p_1,p_2,\dots,p_N$ obtained for each observed connection $x\to y,\ x,y\in V$ having $y$ as destination computer can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
+A sequence of $p$-values $p_1,p_2,\dots,p_N$ can be combined in this code using 6 different methods, described in Heard and Rubin-Delanchy (2018):
 
 * Edgington's method
 \begin{align*}
@@ -65,6 +65,12 @@ S_T = \min\{p_1,\dots,p_N\} & & S_T\overset{d}{\sim}\mathrm{Beta}(1,N)
 \end{align*}
 
 *Note that the distributional results are only valid under normal behaviour of the network.*
+
+In the code, the $p$-values and mid-$p$-values are combined in two different stages. Suppose that for a given destination computer $y\in V$, the $p$-values (and mid-$p$-values) $p_1,\dots,p_N$ corresponding to each observed connection are computed using the PY posterior predictive probability.
+
+* for all the connections on a given edge $x\to y$, it is possible to combine the $p$-values and obtain a grouped $p$-value $p_{xy}$,
+
+* given the $p$-values $p_{xy}$ for each edge, it is possible to combine the $p$-values $p_{xy_1},\dots,p_{xy_x}$ for a given source computer $x$, in order to obtain a $p$-value for each source computer.
 
 # References
 
