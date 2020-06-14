@@ -1,6 +1,6 @@
 # Modelling dynamic network evolution as a Pitman-Yor process
 
-The model and datasets are described in *Sanna Passino, F. and Heard, N. A., "Modelling dynamic network evolution as a Pitman-Yor process", Foundations of Data Science, 2019, 1(3):293-306 ([link to the journal publication](https://www.aimsciences.org/article/doi/10.3934/fods.2019013)). 
+The model and datasets are described in *Sanna Passino, F. and Heard, N. A., "Modelling dynamic network evolution as a Pitman-Yor process", Foundations of Data Science, 2019, 1(3):293-306* ([link to the journal publication](https://www.aimsciences.org/article/doi/10.3934/fods.2019013)). 
 
 This repository contains Python code used to perform network-wide anomaly detection in a computer network using the two parameter Poisson-Dirichlet or Pitman-Yor process (Pitman and Yor, 1997). 
 
