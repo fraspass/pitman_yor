@@ -1,6 +1,8 @@
-# Network-wide anomaly detection using Pitman-Yor processes
+# Modelling dynamic network evolution as a Pitman-Yor process
 
-This reposit contains Python code used to perform network-wide anomaly detection in a computer network using the two parameter Poisson-Dirichlet or Pitman-Yor process (Pitman and Yor, 1997). 
+The model and datasets are described in *Sanna Passino, F. and Heard, N. A., "Modelling dynamic network evolution as a Pitman-Yor process", Foundations of Data Science, 2019, 1(3):293-306 ([link to the journal publication](https://www.aimsciences.org/article/doi/10.3934/fods.2019013)). 
+
+This repository contains Python code used to perform network-wide anomaly detection in a computer network using the two parameter Poisson-Dirichlet or Pitman-Yor process (Pitman and Yor, 1997). 
 
 This code builds up on the Hadoop-MapReduce procedure described in Heard and Rubin-Delanchy (2016). The Dirichlet process described by the authors in the paper is extended to include an extra parameter, which allows for more flexibility when modelling data exhibiting power-law behaviour.
 
@@ -30,7 +32,6 @@ The code also uses mid-$p$-values $q_{n+1}=(p_{n+1}+p_{n+1}^\star)/2$, where:
 $$ p_{n+1}^\star = \sum_{x\in V:\phi_n(x)<\phi_n(x_{n+1})} \frac{\phi_n(x)}{\alpha+n} . $$
 
 The mid-$p$-values might be preferable since the distribution of the source nodes is discrete. 
-
 
 ### Combining p-values
 
@@ -94,12 +95,10 @@ The following command returns the edge list `lanl_graph.txt` with tab sepearated
 hadoop fs -text MY_FOLDER/auth.txt.gz | ./get_auth_graph.py > lanl_graph.txt
 ```
 
-Given the LANL edge list, it is possible to obtain empirical Bayes estimates of the hyperparameters $ \alpha $ and $ d $ using the code in `opt.py`:
+Given the LANL edge list, it is possible to obtain method of moments estimates of the hyperparameters $ \alpha $ and $ d $ using the code in `py_parameters.py`:
 
 ```
-cat lanl_graph.txt | ./opt.py --ret alpha > alpha.txt
-cat lanl_graph.txt | ./opt.py --ret d > d.txt
-cat lanl_graph.txt | ./opt.py --ret all > all.txt
+cat lanl_graph.txt | ./py_parameters.py
 ```
 
 ### Hadoop procedures
@@ -112,6 +111,8 @@ The first of the three Hadoop MapReduce procedures can be most simply run using 
 where the anonymised file `py_anon.sh` in `1 - pvals (all)` is appropriately modified to give the correct -input and -output. Similar procedures can be carried out for the two remaining MapReduce procedures, using the `.sh` files in the folders `2 - pvals (edges)` and `3 - pvals (nodes)`. 
 
 ## References
+
+* Sanna Passino, F. and Heard, N.A. (2019), "Modelling dynamic network evolution as a Pitman-Yor process", Foundations of Data Science, 2019, 1(3):293-306. ([Link](https://www.aimsciences.org/article/doi/10.3934/fods.2019013))
 
 * Heard, N.A. and Rubin-Delanchy, P. (2016), "Network-wide anomaly detection via the Dirichlet process", Proceedings of IEEE workshop on Big Data Analytics for Cyber-Security Computing. ([Link](https://ieeexplore.ieee.org/document/7745478/))
 

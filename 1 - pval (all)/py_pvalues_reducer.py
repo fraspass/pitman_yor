@@ -2,7 +2,10 @@
 import sys
 import argparse
 from collections import Counter
-global alpha,d,k,n,num_categories,alpha_star,ranks,category_counts
+from numpy import exp,log,sqrt
+import numpy as np
+from scipy.stats import chi2, norm, beta
+global alpha,d,k,n,num_categories,num_categories_star,category_ratio,alpha_star,ranks,category_counts
 
 ### MAP-REDUCE: compute the p-values for each connection associated with a given destination computer
 
@@ -15,21 +18,23 @@ global alpha,d,k,n,num_categories,alpha_star,ranks,category_counts
 ## - output: string "source computer \t destination computer \t left_pvalue \t right_pvalue" 
 ## From left_pvalue and right_pvalue one can compute the mid-p-value
 
+### IMPORTANT
+## Rescale the times obtained from input --> 0 corresponds to 00:00 on the first day of observation
+
 ## PARSER to give parameter values from the MapReduce call --> modifications to the code
 ## are necessary if this is used (the parameter values are obtained from two .txt files)
+
 parser = argparse.ArgumentParser()
-parser.add_argument("-a","--alpha",type=float,dest="alpha", metavar="FLOAT",default=1.0)
-parser.add_argument("-d","--disc",type=float,dest="d", metavar="FLOAT",default=0.0)
-parser.add_argument("-k","--classes",type=int,dest="k", metavar="INT",default=0)
-parser.add_argument("--redteam",action="store_true")
+parser.add_argument("-k","--classes",type=int,dest="k", metavar="INT",default=16230)
+parser.add_argument("-m","--model",type=str,dest="m",default='py_corrected')
+
 args = parser.parse_args()
-alpha = args.alpha
-d = args.d
 k = args.k
+model = args.m
 
 #### Description
-# - alpha --> prior strength (in-degree of the node in the paper)
-# - d --> prior discount parameter
+# - alpha --> prior strength of PY process
+# - d --> prior discount parameter of PY process
 # - k --> dimension of the node set
 # - n --> n-th customer
 # - num_categories --> number of unique nodes that have connected to the destination node at n
@@ -37,35 +42,40 @@ k = args.k
 # - ranks --> list of unique nodes that have connected to the given node at n
 # - category_counts --> list of number of connections for each element in ranks
 
-### File containing the estimated alpha parameters
+### File containing the estimated alpha parameters for the PY part
 degrees = {}
-try:
-    degree_file = open("alpha.txt")
-    for line in degree_file:
-        x = line.strip("\n").split("\t")
-        degrees[x[1]] = float(x[0])
-except:
-    None
-
-### File containing the discount parameters
 discount = {}
-try:
-    disc_file = open("d.txt")
-    for line in disc_file:
-        x = line.strip().split("\t")
-        discount[x[1]] = float(x[0])
-except:
-    None
+py_file = open("py_parameters_full.txt","r")
+for line in py_file:
+    x = line.rstrip("\r\n").split("\t")
+    if model == 'py_corrected':
+        degrees[x[0]] = float(x[6])
+        discount[x[0]] = float(x[7])
+    elif model == 'py_standard':
+        degrees[x[0]] = float(x[8])
+        discount[x[0]] = float(x[9])
+    elif model == 'dp_corrected':
+        degrees[x[0]] = float(x[10])
+        discount[x[0]] = 0.0
+    elif model == 'dp_standard':
+        degrees[x[0]] = float(x[11])
+        discount[x[0]] = 0.0
+    else:
+        raise ValueError('Invalid choice of model.')
+
+py_file.close()
 
 # Reset function
 def reset():
-    global alpha,d,k,n,num_categories,alpha_star,ranks,category_counts
-    category_counts=Counter()
-    ranks=[]
-    num_categories=0
-    alpha_star=alpha
-    n=0
-      
+    global alpha, d, k, n, num_categories, num_categories_star, category_ratio, alpha_star, ranks, category_counts
+    category_counts = Counter()
+    ranks = []
+    num_categories = 0
+    num_categories_star = 0
+    category_ratio = 1.0
+    alpha_star = alpha
+    n = 0
+
 # Pitman-Yor p-values
 def py_pvalue(x):
     global alpha,d,k,n,num_categories,alpha_star,ranks,category_counts
@@ -79,7 +89,7 @@ def py_pvalue(x):
         	# the dimension of the node set
             cum_alpha *= (k - num_categories) / float(k)
         # Divide by alpha_star to get the right p-value
-        right_pvalue = cum_alpha/alpha_star
+        right_pvalue = cum_alpha / alpha_star
         left_pvalue = 0
         # Increase the category count for the new link
         category_counts[x] = 1
@@ -94,6 +104,7 @@ def py_pvalue(x):
         prev_freq = category_counts[x]
         # Total in the cumulative sum
         total = 0
+        total_tilde = 0
         # Look down from top rank --> how UNLIKELY (compute p-value from the other side)
         rank = 0 
         # While the category counts are less than the counts for the sampled category
@@ -146,14 +157,17 @@ def py_pvalue(x):
     n += 1
     # Increase alpha_star
     alpha_star += 1
+    # Mid-p-values 
+    mid_pvalue = (left_pvalue+right_pvalue)/2.0
     # Return the left and right p-values
-    return [left_pvalue,right_pvalue]
+    return [right_pvalue,mid_pvalue]
 
 # Empty old key
 old_key = ""
 for line in sys.stdin:
     # Strip and split the line
-    key,time,value = line.strip().split("\t")
+    key,time,value = line.rstrip('\r\n').split("\t")
+    time = float(time)
     # If a new key is observed
     if key != old_key:
         # Set the value of old_key to the observed key
@@ -163,7 +177,12 @@ for line in sys.stdin:
             alpha = float(degrees[key])
             d = float(discount[key])
         except:
-            None
+            continue
         # Reset the values used with the previous key
         reset()
-    print ",".join([value,key] + map(str, py_pvalue(value)))
+    # Pitman-Yor p-values
+    py_pvals = np.array(py_pvalue(value))
+    # Calculate Fisher p-value and mid-p-value
+    # Print the p-values
+    print ",".join([value,key] + map(str, py_pvals))
+
